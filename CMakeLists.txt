@@ -4,6 +4,8 @@ project(cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(cpp BT.cpp
+        #DS.cpp
+        #SqListBasicOperations.cpp
         #DFS.cpp
         #VAR.cpp
         #SqListBasicOperations.cpp
