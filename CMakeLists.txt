@@ -3,7 +3,12 @@ project(cpp)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp BT.cpp
+add_executable(
+        #cpp BT.cpp
+        quick_sort.cpp
+        quick_sort.h
+        quicksorttest.cpp
+        quick_sort.cpp
         #DS.cpp
         #SqListBasicOperations.cpp
         #DFS.cpp
@@ -14,6 +19,7 @@ add_executable(cpp BT.cpp
 )
 
 #set(SOURCE_FILES
-#        BT.cpp
-#        my_file_to_exclude.cpp
+#        quick_sort.cpp
+#        quick_sort.h
+#        quicksorttest.cpp
 #)
