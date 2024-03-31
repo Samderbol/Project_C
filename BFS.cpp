@@ -38,10 +38,10 @@ int QueueEmpty(Queue Q) {
 
 // 创建二叉树结点
 TreeNode* CreateTreeNode(char data) {
-    TreeNode* node = (TreeNode*)malloc(sizeof(TreeNode));
+    auto* node = (TreeNode*)malloc(sizeof(TreeNode));
     if (node) {
         node->data = data;
-        node->left = node->right = NULL;
+        node->left = node->right = nullptr;
     }
     return node;
 }
