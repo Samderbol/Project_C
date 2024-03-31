@@ -67,6 +67,39 @@ void MiniSpanTree_PRIM(MGraph G, VertexType u) {
         }
     }
 }
+//#define MAX_VERTEX_NUM 100 // 定义顶点数的最大值
+//
+//typedef struct {
+//    VertexType adjvex;
+//    VRType lowcost;
+//} CloseEdge[MAX_VERTEX_NUM];
+//
+//void MiniSpanTree_PRIM(MGraph G, VertexType u) {
+//    CloseEdge closedge;
+//    int k, i, j;
+//
+//    k = LocateVex(G, u);
+//    for (j = 0; j < G.vexnum; ++j) {
+//        if (j != k) {
+//            closedge[j].adjvex = u;
+//            closedge[j].lowcost = G.arcs[k][j].adj;
+//        }
+//    }
+//    closedge[k].lowcost = 0; // 初始化，U={u}
+//
+//    for (i = 1; i < G.vexnum; ++i) {
+//        k = minimum(closedge); // 选择下一个顶点
+//        printf("(%c, %c)\n", closedge[k].adjvex, G.vexs[k]); // 输出生成树的边
+//        closedge[k].lowcost = 0; // 第k个点并入U集
+//
+//        for (j = 0; j < G.vexnum; ++j) {
+//            if (G.arcs[k][j].adj < closedge[j].lowcost) {
+//                closedge[j].adjvex = G.vexs[k];
+//                closedge[j].lowcost = G.arcs[k][j].adj;
+//            }
+//        }
+//    }
+//}
 
 int main() {
     MGraph G = {
