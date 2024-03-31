@@ -4,5 +4,5 @@ project(cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
-        minispantree_prim.cpp
-        minispantree_prim.cpp)
+        BFS
+        BFS.cpp)
