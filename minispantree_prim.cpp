@@ -70,16 +70,17 @@ void MiniSpanTree_PRIM(MGraph G, VertexType u) {
 
 int main() {
     MGraph G = {
-            {'A', 'B', 'C', 'D', 'E'}, // 顶点数组
+            {'A', 'B', 'C', 'D', 'E','F'}, // 顶点数组
             {
-                    {0, 6, INT_MAX, 1, INT_MAX}, // 邻接矩阵
-                    {6, 0, 5, 2, 2},
-                    {INT_MAX, 5, 0, INT_MAX, 5},
-                    {1, 2, INT_MAX, 0, 4},
-                    {INT_MAX, 2, 5, 4, 0}
+                    {0, 6, 1, 5, INT_MAX,INT_MAX}, // 邻接矩阵
+                    {6, 0, 5, INT_MAX, 3, INT_MAX},
+                    {1, 5, 0, 5, 6, 4},
+                    {5, INT_MAX, 5, 0, INT_MAX, 2},
+                    {INT_MAX, 3, 6, INT_MAX, INT_MAX,6},
+                    {INT_MAX, INT_MAX, 4, 2, 6,INT_MAX},
             },
-            5, // 顶点数
-            7  // 边数
+            6, // 顶点数
+            10  // 边数
     };
 
     VertexType u = 'A'; // 起始顶点为 A
