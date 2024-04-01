@@ -2,11 +2,11 @@
 #include <cstring>
 #define MAX_V 11
 
-typedef struct {                    // 图的定义
-    int numVertices, numEdges;      // 图中实际的顶点数和边数
-    char VerticesList[MAX_V];        // 顶点表，MAX_V为已定义常量
-    int Edge[MAX_V][MAX_V];           // 邻接矩阵
-}MGraph;
+typedef struct {              // 图的定义
+    int numVertices, numEdges;// 图中实际的顶点数和边数
+    char VerticesList[MAX_V]; // 顶点表，MAX_V为已定义常量
+    int Edge[MAX_V][MAX_V];   // 邻接矩阵
+} MGraph;
 
 int IsExistEL(MGraph G) {
     int degrees[G.numVertices];
@@ -26,9 +26,9 @@ int IsExistEL(MGraph G) {
     }
     // 检查度为奇数的点个数是否为0或者2
     if (count == 0 || count == 2) {
-        return 1;  // 存在EL路径
+        return 1;// 存在EL路径
     } else {
-        return 0;  // 不存在EL路径
+        return 0;// 不存在EL路径
     }
 }
 
@@ -43,7 +43,11 @@ int main() {
         G.VerticesList[i] = V[i];
     }
     memset(G.Edge, 0, sizeof(G.numVertices));
-    int M[5][5] = {{0, 1, 0, 0, 1}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}, {0, 1, 1, 0, 1}, {1, 0, 0, 1, 0}};
+    int M[5][5] = {{0, 1, 0, 0, 1},
+                   {1, 0, 1, 1, 0},
+                   {0, 1, 0, 1, 0},
+                   {0, 1, 1, 0, 1},
+                   {1, 0, 0, 1, 0}};
     for (int i = 0; i < G.numVertices; i++) {
         for (int j = 0; j < G.numVertices; j++) {
             G.Edge[i][j] = M[i][j];
