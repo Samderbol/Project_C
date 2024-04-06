@@ -4,5 +4,5 @@ project(cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
-        Shortestpath_DIJ
-        Shortestpath_DIJ.cpp)
+        BracketMatching
+        BracketMatching.cpp)
