@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
         cpp
-        selection_sort_linked_list.cpp)
+        is_bst_array_representation.cpp)
