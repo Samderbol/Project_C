@@ -33,12 +33,12 @@ bool judgeBST(SqBiTree bt) {
             m = (k - 1) / 2;  // 计算父节点索引
 
             // 如果当前节点是左子节点
-            if (k % 2 == 1 && bt.SqBiTNode[k] < pmax[m]) {
-                pmin[k] = pmin[m];
+            if (k % 2 == 1 && bt.SqBiTNode[m] > pmax[k]) {
+                pmin[m] = pmin[k];
             }
                 // 如果当前节点是右子节点
-            else if (k % 2 == 0 && bt.SqBiTNode[k] > pmin[m]) {
-                pmax[k] = pmax[m];
+            else if (k % 2 == 0 && bt.SqBiTNode[m] < pmin[k]) {
+                pmax[m] = pmax[k];
             }
                 // 如果不满足BST的条件，返回false
             else {
